@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="A simple circuit drawing tool using Javascript">
+    <title>O_o</title>
+
+    <link rel="stylesheet" href="style/normalize.css" />
+    <link rel="stylesheet" href="style/main.css" />
+    <script src="js/main.js" defer type="module"></script>
+</head>
+<body>
+    <div id="toolbar-cont">
+        <button id="cursor-btn" class="toolbar-btn selected"></button>
+        <br>
+        <hr>
+        <button id="and-btn" class="toolbar-btn unselected"></button>
+        <button id="nand-btn" class="toolbar-btn unselected"></button>
+        <button id="or-btn" class="toolbar-btn unselected"></button>
+        <button id="nor-btn" class="toolbar-btn unselected"></button>
+        <button id="xor-btn" class="toolbar-btn unselected"></button>
+        <button id="not-btn" class="toolbar-btn unselected"></button>
+    </div>
+    <div id="cv-cont"><canvas id="cv"></canvas></div>
+</body>
+</html>

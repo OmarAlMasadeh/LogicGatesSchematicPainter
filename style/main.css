@@ -1,0 +1,78 @@
+html {
+  height: 100%;
+  background-color: #444444;
+}
+body {
+  min-height: 100%;
+  display: grid;
+  grid-template-columns: auto 85%;
+  grid-template-areas: "toolbar cv";
+}
+div {
+  background-color: white;
+  /*border: 2px black solid;*/
+  margin: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+}
+#toolbar-cont {
+  grid-area: toolbar;
+  margin: 20px 0 20px 20px;
+  background-color: #999999;
+}
+#cv-cont {
+  grid-area: cv;
+  position: relative;
+}
+#cv {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+
+.toolbar-btn {
+  width: 80px;
+  height: 40px;
+  margin: 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-size: contain;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+}
+button.selected {
+  background-color: #444444 !important;
+}
+button.unselected {
+  background-color: #888888 !important;
+}
+#and-btn {
+  background: url("icons/AND.svg") no-repeat left center;
+  background-size: contain;
+}
+#nand-btn {
+  background: url("icons/NAND.svg") no-repeat left center;
+  background-size: contain;
+}
+#or-btn {
+  background: url("icons/OR.svg") no-repeat left center;
+  background-size: contain;
+}
+#nor-btn {
+  background: url("icons/NOR.svg") no-repeat left center;
+  background-size: contain;
+}
+#xor-btn {
+  background: url("icons/XOR.svg") no-repeat left center;
+  background-size: contain;
+}
+#not-btn {
+  background: url("icons/NOT.svg") no-repeat left center;
+  background-size: contain;
+}
+#cursor-btn {
+  background: url("icons/cursor.svg") no-repeat center;
+  background-size: contain;
+  width: 50px;
+  height: 50px;
+}
