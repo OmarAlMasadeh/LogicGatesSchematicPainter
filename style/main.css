@@ -42,8 +42,9 @@ div {
   align-items: center;
 }
 #save-btn {
-  width: 200px;
-  height: 50px;
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
   background-color: #444444;
   color: antiquewhite;
   border: solid rgba(255, 255, 255, 0.3) 1px;
