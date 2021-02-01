@@ -6,7 +6,7 @@ body {
   min-height: 100%;
   display: grid;
   grid-template-columns: auto 85%;
-  grid-template-areas: "toolbar cv";
+  grid-template-areas: "sidepanel cv";
 }
 div {
   background-color: white;
@@ -15,10 +15,11 @@ div {
   border-radius: 10px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
 }
-#toolbar-cont {
-  grid-area: toolbar;
+#sidepanel {
+  grid-area: sidepanel;
   margin: 20px 0 20px 20px;
   background-color: #999999;
+  display: grid;
 }
 #cv-cont {
   grid-area: cv;
@@ -29,6 +30,26 @@ div {
   height: 100%;
   width: 100%;
 }
+#toolbar-cont {
+  grid-row: 1;
+  background-color: #999999;
+}
+#info-cont {
+  background-color: #999999;
+  grid-row: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#save-btn {
+  width: 200px;
+  height: 50px;
+  background-color: #444444;
+  color: antiquewhite;
+  border: solid rgba(255, 255, 255, 0.3) 1px;
+  text-transform: uppercase;
+  text-decoration: none;
+}
 
 .toolbar-btn {
   width: 80px;
@@ -38,7 +59,11 @@ div {
   border-radius: 5px;
   cursor: pointer;
   background-size: contain;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.7);
+}
+button:focus {
+  outline: none;
+  box-shadow: none;
 }
 button.selected {
   background-color: #444444 !important;

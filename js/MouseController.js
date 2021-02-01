@@ -1,7 +1,14 @@
 import {canvas , ctx} from './CanvasManager.js';
 import {spacing,setSpacing,drawPointGrid} from './Grid.js';
 import {drawScene,addShapeToScene} from './Scene.js';
-import {Circle,AndGate,NotGate,NandGate} from './Shape.js';
+
+import {NotGate} from './NotGate.js';
+import {AndGate} from './AndGate.js';
+import {NandGate} from './NandGate.js';
+import {OrGate} from './OrGate.js';
+import {NorGate} from './NorGate.js';
+import {XorGate} from './XorGate.js';
+import {Circle} from './Circle.js';
 
 canvas.addEventListener('wheel',onWheel);
 canvas.addEventListener('mousemove',drawHover);
@@ -50,6 +57,12 @@ function drawHover(e){
             shape = new AndGate("hover",x,y,2).Draw();
         if(selectedTool == "nand-btn")
             shape = new NandGate("hover",x,y,2).Draw();
+        if(selectedTool == "or-btn")
+            shape = new OrGate("hover",x,y,2).Draw();
+        if(selectedTool == "nor-btn")
+            shape = new NorGate("hover",x,y,2).Draw();
+        if(selectedTool == "xor-btn")
+            shape = new XorGate("hover",x,y,2).Draw();
         if(selectedTool == "not-btn")
             shape = new NotGate("hover",x,y).Draw();
     }
@@ -73,6 +86,12 @@ function onClick(e){
         addShapeToScene(new NandGate("c_"+x+"_"+y,x,y,2));
     if(selectedTool == "not-btn")
         addShapeToScene(new NotGate("c_"+x+"_"+y,x,y));
+    if(selectedTool == "or-btn")
+        addShapeToScene(new OrGate("c_"+x+"_"+y,x,y,2));
+    if(selectedTool == "nor-btn")
+        addShapeToScene(new NorGate("c_"+x+"_"+y,x,y,2));
+    if(selectedTool == "xor-btn")
+        addShapeToScene(new XorGate("c_"+x+"_"+y,x,y,2));
 }
 
 function onWheel(e){
